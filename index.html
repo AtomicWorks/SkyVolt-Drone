@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyVolt Drones — Next-Gen Aerial Intelligence</title>
+    <meta name="description"
+        content="SkyVolt Drones delivers cutting-edge drone technology for commercial, industrial, and creative applications. Experience the future of flight.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 2L35 12V28L20 38L5 28V12L20 2Z" stroke="url(#logoGrad)" stroke-width="2" fill="none" />
+                    <path d="M20 10L28 16V24L20 30L12 24V16L20 10Z" fill="url(#logoGrad)" />
+                    <defs>
+                        <linearGradient id="logoGrad" x1="5" y1="2" x2="35" y2="38">
+                            <stop offset="0%" stop-color="#00d4ff" />
+                            <stop offset="100%" stop-color="#7b2ff7" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>SkyVolt</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#fleet" class="nav-link">Fleet</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <a href="#contact" class="nav-cta">Get Started</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <video class="hero-video" muted loop playsinline preload="auto" id="heroVideo"
+                style="position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);object-fit:cover;opacity:0.75;display:block;">
+            </video>
+            <div class="hero-video-overlay"></div>
+            <div class="hero-grid"></div>
+            <div class="hero-radial"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge anim-fade-up">
+                <span class="badge-dot"></span>
+                Next Generation Drone Technology
+            </div>
+            <h1 class="hero-title anim-fade-up" style="--delay: 0.1s">
+                Redefining the<br>
+                <span class="gradient-text">Sky's Potential</span>
+            </h1>
+            <p class="hero-subtitle anim-fade-up" style="--delay: 0.2s">
+                From precision agriculture to cinematic aerial shots, SkyVolt drones push the boundaries of what's
+                possible above ground. Experience autonomous intelligence that adapts to every mission.
+            </p>
+            <div class="hero-actions anim-fade-up" style="--delay: 0.3s">
+                <a href="#fleet" class="btn btn-primary">
+                    Explore Fleet
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <a href="#services" class="btn btn-ghost">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M8 7L14 10L8 13V7Z" fill="currentColor" />
+                    </svg>
+                    Watch Demo
+                </a>
+            </div>
+            <div class="hero-stats anim-fade-up" style="--delay: 0.4s">
+                <div class="stat">
+                    <span class="stat-number" data-target="150">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Enterprise Clients</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label">Mission Success</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="12">0</span><span class="stat-suffix">K</span>
+                    <span class="stat-label">Flights Completed</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator anim-fade-up" style="--delay: 0.7s">
+            <div class="scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag">What We Offer</span>
+                <h2 class="section-title">Precision Solutions for<br><span class="gradient-text">Every Industry</span>
+                </h2>
+                <p class="section-desc">Our drones integrate AI-powered navigation, thermal imaging, and real-time data
+                    analytics to deliver unmatched performance across all sectors.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card anim-fade-up" style="--delay: 0.1s">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" stroke="url(#sGrad1)" stroke-width="2" />
+                            <path d="M16 24L22 30L32 18" stroke="url(#sGrad1)" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="sGrad1" x1="4" y1="4" x2="44" y2="44">
+                                    <stop stop-color="#00d4ff" />
+                                    <stop offset="1" stop-color="#7b2ff7" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Precision Agriculture</h3>
+                    <p>AI-powered crop monitoring, precision spraying, and yield prediction with centimeter-level
+                        accuracy.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card anim-fade-up" style="--delay: 0.2s">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <rect x="8" y="8" width="32" height="32" rx="4" stroke="url(#sGrad2)" stroke-width="2" />
+                            <path d="M16 32L22 22L28 26L34 16" stroke="url(#sGrad2)" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <defs>
+                                <linearGradient id="sGrad2" x1="8" y1="8" x2="40" y2="40">
+                                    <stop stop-color="#ff6b6b" />
+                                    <stop offset="1" stop-color="#ffa500" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Infrastructure Inspection</h3>
+                    <p>Automated bridge, tower, and pipeline inspections with thermal imaging and defect detection.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card anim-fade-up" style="--delay: 0.3s">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <path d="M24 4L44 14V34L24 44L4 34V14L24 4Z" stroke="url(#sGrad3)" stroke-width="2" />
+                            <path d="M24 4V44M4 14L44 34M44 14L4 34" stroke="url(#sGrad3)" stroke-width="1"
+                                opacity="0.5" />
+                            <defs>
+                                <linearGradient id="sGrad3" x1="4" y1="4" x2="44" y2="44">
+                                    <stop stop-color="#00ff88" />
+                                    <stop offset="1" stop-color="#00d4ff" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>3D Mapping & Survey</h3>
+                    <p>Generate high-resolution 3D models and orthomosaics for construction, mining, and urban planning.
+                    </p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card anim-fade-up" style="--delay: 0.4s">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="20" r="8" stroke="url(#sGrad4)" stroke-width="2" />
+                            <path d="M12 40C12 33.4 17.4 28 24 28C30.6 28 36 33.4 36 40" stroke="url(#sGrad4)"
+                                stroke-width="2" stroke-linecap="round" />
+                            <defs>
+                                <linearGradient id="sGrad4" x1="12" y1="12" x2="36" y2="40">
+                                    <stop stop-color="#e040fb" />
+                                    <stop offset="1" stop-color="#7b2ff7" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Cinematic Aerial</h3>
+                    <p>8K cinema-grade footage with AI-stabilization and programmable flight paths for film and media.
+                    </p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card anim-fade-up" style="--delay: 0.5s">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <path d="M24 8V40M8 24H40" stroke="url(#sGrad5)" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="24" cy="24" r="16" stroke="url(#sGrad5)" stroke-width="2" />
+                            <circle cx="24" cy="24" r="6" stroke="url(#sGrad5)" stroke-width="2" />
+                            <defs>
+                                <linearGradient id="sGrad5" x1="8" y1="8" x2="40" y2="40">
+                                    <stop stop-color="#ff6b6b" />
+                                    <stop offset="1" stop-color="#e040fb" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Search & Rescue</h3>
+                    <p>Thermal-equipped autonomous drones for emergency response, disaster relief, and maritime rescue.
+                    </p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+                <div class="service-card anim-fade-up" style="--delay: 0.6s">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <rect x="10" y="14" width="28" height="20" rx="3" stroke="url(#sGrad6)" stroke-width="2" />
+                            <path d="M18 14V10H30V14" stroke="url(#sGrad6)" stroke-width="2" />
+                            <circle cx="24" cy="24" r="5" stroke="url(#sGrad6)" stroke-width="2" />
+                            <defs>
+                                <linearGradient id="sGrad6" x1="10" y1="10" x2="38" y2="34">
+                                    <stop stop-color="#ffa500" />
+                                    <stop offset="1" stop-color="#00ff88" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Delivery & Logistics</h3>
+                    <p>Autonomous last-mile delivery with obstacle avoidance and real-time package tracking systems.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section class="section fleet" id="fleet">
+        <div class="container">
+            <div class="section-header anim-fade-up">
+                <span class="section-tag">Our Fleet</span>
+                <h2 class="section-title">Meet the <span class="gradient-text">Machines</span></h2>
+                <p class="section-desc">Each drone in the SkyVolt fleet is purpose-built for specific mission profiles,
+                    delivering unmatched performance in its class.</p>
+            </div>
+            <div class="fleet-showcase">
+                <div class="fleet-card anim-fade-up" style="--delay: 0.1s">
+                    <div class="fleet-card-glow"></div>
+                    <div class="fleet-card-inner">
+                        <div class="fleet-img-wrap fleet-video-wrap">
+                            <video class="fleet-video" muted loop playsinline id="phantomVideo"></video>
+                            <div class="fleet-video-overlay"></div>
+                        </div>
+                        <div class="fleet-info">
+                            <span class="fleet-tag">Flagship</span>
+                            <h3>Phantom X1</h3>
+                            <p>Our most advanced multirotor with 45-min flight time, 8K camera, and AI obstacle
+                                avoidance.</p>
+                            <div class="fleet-specs">
+                                <div class="spec"><span class="spec-val">45</span><span
+                                        class="spec-unit">min</span><span class="spec-label">Flight Time</span></div>
+                                <div class="spec"><span class="spec-val">72</span><span
+                                        class="spec-unit">km/h</span><span class="spec-label">Max Speed</span></div>
+                                <div class="spec"><span class="spec-val">8K</span><span class="spec-unit"></span><span
+                                        class="spec-label">Camera</span></div>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="fleet-card anim-fade-up" style="--delay: 0.2s">
+                    <div class="fleet-card-glow"></div>
+                    <div class="fleet-card-inner">
+                        <div class="fleet-img-wrap fleet-video-wrap">
+                            <video class="fleet-video" muted loop playsinline id="spectreVideo"></video>
+                            <div class="fleet-video-overlay"></div>
+                        </div>
+                        <div class="fleet-info">
+                            <span class="fleet-tag">Industrial</span>
+                            <h3>Spectre S4</h3>
+                            <p>Heavy-lift industrial drone for cargo delivery and infrastructure inspection with 15kg
+                                payload.</p>
+                            <div class="fleet-specs">
+                                <div class="spec"><span class="spec-val">35</span><span
+                                        class="spec-unit">min</span><span class="spec-label">Flight Time</span></div>
+                                <div class="spec"><span class="spec-val">15</span><span class="spec-unit">kg</span><span
+                                        class="spec-label">Payload</span></div>
+                                <div class="spec"><span class="spec-val">4K</span><span class="spec-unit"></span><span
+                                        class="spec-label">Thermal</span></div>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="fleet-card anim-fade-up" style="--delay: 0.3s">
+                    <div class="fleet-card-glow"></div>
+                    <div class="fleet-card-inner">
+                        <div class="fleet-img-wrap fleet-video-wrap">
+                            <video class="fleet-video" muted loop playsinline id="vortexVideo"></video>
+                            <div class="fleet-video-overlay"></div>
+                        </div>
+                        <div class="fleet-info">
+                            <span class="fleet-tag">Racing</span>
+                            <h3>Vortex V2</h3>
+                            <p>High-performance racing drone built for FPV competitions with sub-100ms response time.
+                            </p>
+                            <div class="fleet-specs">
+                                <div class="spec"><span class="spec-val">12</span><span
+                                        class="spec-unit">min</span><span class="spec-label">Flight Time</span></div>
+                                <div class="spec"><span class="spec-val">160</span><span
+                                        class="spec-unit">km/h</span><span class="spec-label">Max Speed</span></div>
+                                <div class="spec"><span class="spec-val">HD</span><span class="spec-unit"></span><span
+                                        class="spec-label">FPV Feed</span></div>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content anim-fade-up">
+                    <span class="section-tag">About SkyVolt</span>
+                    <h2 class="section-title">Engineering the Future<br><span class="gradient-text">From Above</span>
+                    </h2>
+                    <p>Founded in 2021, SkyVolt has rapidly become a leader in autonomous drone technology. Our team of
+                        200+ engineers, pilots, and AI researchers are dedicated to pushing the boundaries of aerial
+                        innovation.</p>
+                    <p>We believe that drones are not just tools — they're the next frontier of human capability. Every
+                        SkyVolt drone is built with military-grade components, tested in extreme conditions, and
+                        certified to the highest safety standards.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Award Winning</h4>
+                                <p>12+ industry awards for innovation and safety excellence.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                                        stroke="currentColor" stroke-width="1.5" />
+                                    <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>FAA Certified</h4>
+                                <p>All fleet models meet strict FAA Part 107 compliance.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2V22M2 12H22" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Global Reach</h4>
+                                <p>Operating in 30+ countries across 6 continents.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual anim-fade-up" style="--delay: 0.2s">
+                    <div class="about-image-grid">
+                        <div class="about-img-card about-img-1 about-placeholder">
+                            <div class="placeholder-content">
+                                <svg viewBox="0 0 24 24" fill="none" width="32" height="32">
+                                    <path d="M3 9L12 2L21 9V20C21 20.5 20.7 21 20 21H4C3.3 21 3 20.5 3 20V9Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                    <path d="M9 21V12H15V21" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span>SkyVolt HQ</span>
+                            </div>
+                        </div>
+                        <div class="about-img-card about-img-2 about-placeholder">
+                            <div class="placeholder-content">
+                                <svg viewBox="0 0 24 24" fill="none" width="32" height="32">
+                                    <path
+                                        d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                                <span>Drone Testing</span>
+                            </div>
+                        </div>
+                        <div class="about-img-card about-img-3 about-placeholder">
+                            <div class="placeholder-content">
+                                <svg viewBox="0 0 24 24" fill="none" width="32" height="32">
+                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5" />
+                                    <path d="M23 21v-2a4 4 0 00-3-3.87" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <path d="M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                </svg>
+                                <span>Engineering Team</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-card anim-fade-up">
+                <div class="cta-bg"></div>
+                <div class="cta-content">
+                    <h2>Ready to <span class="gradient-text">Take Flight?</span></h2>
+                    <p>Join 150+ enterprises already leveraging SkyVolt drone technology to transform their operations.
+                    </p>
+                    <div class="cta-actions">
+                        <a href="#contact" class="btn btn-primary btn-lg">Schedule a Demo</a>
+                        <a href="#fleet" class="btn btn-ghost btn-lg">Browse Fleet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info anim-fade-up">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Build the<br><span class="gradient-text">Future Together</span></h2>
+                    <p>Whether you need a custom drone solution or want to explore our fleet, our team is ready to help
+                        you soar.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                                        stroke="currentColor" stroke-width="1.5" />
+                                    <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>contact@skyvoltdrones.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M22 16.92V19.92C22 20.48 21.56 20.93 21 20.97C20.83 20.99 20.67 21 20.5 21C10.84 21 3 13.16 3 3.5C3 3.33 3.01 3.17 3.03 3C3.07 2.44 3.52 2 4.08 2H7.08C7.56 2 7.97 2.34 8.05 2.81C8.14 3.38 8.3 3.93 8.52 4.46C8.66 4.79 8.58 5.17 8.32 5.43L6.91 6.84C8.51 9.71 10.79 11.99 13.66 13.59L15.07 12.18C15.33 11.92 15.71 11.84 16.04 11.98C16.57 12.2 17.12 12.36 17.69 12.45C18.17 12.53 18.5 12.95 18.5 13.42V16.92C18.5 16.92 22 16.92 22 16.92Z"
+                                        stroke="currentColor" stroke-width="1.5" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 789-0123</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 5.03 7.03 1 12 1C16.97 1 21 5.03 21 10Z"
+                                        stroke="currentColor" stroke-width="1.5" />
+                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Visit HQ</h4>
+                                <p>120 Innovation Drive, Austin, TX 78701</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrap anim-fade-up" style="--delay: 0.2s">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="john@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">Interested In</label>
+                            <select id="interest" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="agriculture">Precision Agriculture</option>
+                                <option value="inspection">Infrastructure Inspection</option>
+                                <option value="mapping">3D Mapping & Survey</option>
+                                <option value="cinema">Cinematic Aerial</option>
+                                <option value="rescue">Search & Rescue</option>
+                                <option value="delivery">Delivery & Logistics</option>
+                                <option value="custom">Custom Solution</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            Send Message
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 2L35 12V28L20 38L5 28V12L20 2Z" stroke="url(#logoGrad2)" stroke-width="2"
+                                fill="none" />
+                            <path d="M20 10L28 16V24L20 30L12 24V16L20 10Z" fill="url(#logoGrad2)" />
+                            <defs>
+                                <linearGradient id="logoGrad2" x1="5" y1="2" x2="35" y2="38">
+                                    <stop offset="0%" stop-color="#00d4ff" />
+                                    <stop offset="100%" stop-color="#7b2ff7" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>SkyVolt</span>
+                    </a>
+                    <p>Pioneer drone technology company delivering next-generation aerial intelligence for industries
+                        worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"
+                                    stroke="currentColor" stroke-width="1.5" />
+                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" />
+                                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor"
+                                    stroke-width="1.5" />
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5" />
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"
+                                    stroke="currentColor" stroke-width="1.5" />
+                                <path d="M9.75 15.02l5.75-3.27-5.75-3.27v6.54z" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Products</h4>
+                    <a href="#">Phantom X1</a>
+                    <a href="#">Spectre S4</a>
+                    <a href="#">Vortex V2</a>
+                    <a href="#">Accessories</a>
+                    <a href="#">Software SDK</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Solutions</h4>
+                    <a href="#">Agriculture</a>
+                    <a href="#">Inspection</a>
+                    <a href="#">Mapping</a>
+                    <a href="#">Cinema</a>
+                    <a href="#">Rescue</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press Kit</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SkyVolt Drones. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

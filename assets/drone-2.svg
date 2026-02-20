@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bG2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a1e2e"/><stop offset="100%" stop-color="#0d1020"/></linearGradient>
+    <linearGradient id="aG2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ff6b6b"/><stop offset="100%" stop-color="#ffa500"/></linearGradient>
+    <linearGradient id="pG2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ffa500" stop-opacity="0.6"/><stop offset="100%" stop-color="#ffa500" stop-opacity="0"/></linearGradient>
+    <filter id="g2"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <!-- Heavy-lift industrial drone - wider body, 6 arms -->
+  <line x1="160" y1="140" x2="80" y2="100" stroke="url(#bG2)" stroke-width="7" stroke-linecap="round"/>
+  <line x1="200" y1="130" x2="200" y2="70" stroke="url(#bG2)" stroke-width="7" stroke-linecap="round"/>
+  <line x1="240" y1="140" x2="320" y2="100" stroke="url(#bG2)" stroke-width="7" stroke-linecap="round"/>
+  <line x1="160" y1="170" x2="80" y2="210" stroke="url(#bG2)" stroke-width="7" stroke-linecap="round"/>
+  <line x1="200" y1="180" x2="200" y2="240" stroke="url(#bG2)" stroke-width="7" stroke-linecap="round"/>
+  <line x1="240" y1="170" x2="320" y2="210" stroke="url(#bG2)" stroke-width="7" stroke-linecap="round"/>
+  <!-- Propellers -->
+  <ellipse cx="80" cy="100" rx="38" ry="7" fill="url(#pG2)" opacity="0.5"><animateTransform attributeName="transform" type="rotate" from="0 80 100" to="360 80 100" dur="0.3s" repeatCount="indefinite"/></ellipse>
+  <ellipse cx="200" cy="70" rx="38" ry="7" fill="url(#pG2)" opacity="0.5"><animateTransform attributeName="transform" type="rotate" from="0 200 70" to="-360 200 70" dur="0.28s" repeatCount="indefinite"/></ellipse>
+  <ellipse cx="320" cy="100" rx="38" ry="7" fill="url(#pG2)" opacity="0.5"><animateTransform attributeName="transform" type="rotate" from="0 320 100" to="360 320 100" dur="0.25s" repeatCount="indefinite"/></ellipse>
+  <ellipse cx="80" cy="210" rx="38" ry="7" fill="url(#pG2)" opacity="0.4"><animateTransform attributeName="transform" type="rotate" from="0 80 210" to="-360 80 210" dur="0.32s" repeatCount="indefinite"/></ellipse>
+  <ellipse cx="200" cy="240" rx="38" ry="7" fill="url(#pG2)" opacity="0.4"><animateTransform attributeName="transform" type="rotate" from="0 200 240" to="360 200 240" dur="0.27s" repeatCount="indefinite"/></ellipse>
+  <ellipse cx="320" cy="210" rx="38" ry="7" fill="url(#pG2)" opacity="0.4"><animateTransform attributeName="transform" type="rotate" from="0 320 210" to="-360 320 210" dur="0.3s" repeatCount="indefinite"/></ellipse>
+  <!-- Motors -->
+  <circle cx="80" cy="100" r="9" fill="#1a1e2e" stroke="#ffa500" stroke-width="1.5"/><circle cx="80" cy="100" r="2.5" fill="#ffa500" filter="url(#g2)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+  <circle cx="200" cy="70" r="9" fill="#1a1e2e" stroke="#ffa500" stroke-width="1.5"/><circle cx="200" cy="70" r="2.5" fill="#ffa500" filter="url(#g2)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" begin="0.3s"/></circle>
+  <circle cx="320" cy="100" r="9" fill="#1a1e2e" stroke="#ffa500" stroke-width="1.5"/><circle cx="320" cy="100" r="2.5" fill="#ffa500" filter="url(#g2)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" begin="0.6s"/></circle>
+  <circle cx="80" cy="210" r="9" fill="#1a1e2e" stroke="#ff6b6b" stroke-width="1.5"/><circle cx="80" cy="210" r="2.5" fill="#ff6b6b" filter="url(#g2)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" begin="0.9s"/></circle>
+  <circle cx="200" cy="240" r="9" fill="#1a1e2e" stroke="#ff6b6b" stroke-width="1.5"/><circle cx="200" cy="240" r="2.5" fill="#ff6b6b" filter="url(#g2)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" begin="1.2s"/></circle>
+  <circle cx="320" cy="210" r="9" fill="#1a1e2e" stroke="#ff6b6b" stroke-width="1.5"/><circle cx="320" cy="210" r="2.5" fill="#ff6b6b" filter="url(#g2)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" begin="1.5s"/></circle>
+  <!-- Large body -->
+  <rect x="145" y="125" width="110" height="60" rx="14" fill="url(#bG2)" stroke="#2a2f44" stroke-width="1"/>
+  <rect x="155" y="153" width="90" height="3" rx="1.5" fill="url(#aG2)" opacity="0.7"/>
+  <!-- Cargo hook -->
+  <rect x="185" y="187" width="30" height="20" rx="4" fill="#0d1020" stroke="#ffa500" stroke-width="1" opacity="0.8"/>
+  <path d="M195 207 L195 220 Q200 228 205 220 L205 207" stroke="#ffa500" stroke-width="1.5" fill="none"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a1e2e"/><stop offset="100%" stop-color="#0d1020"/></linearGradient>
+    <linearGradient id="aGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#7b2ff7"/></linearGradient>
+    <linearGradient id="pGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00d4ff" stop-opacity="0.6"/><stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/></linearGradient>
+    <filter id="g1"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <line x1="165" y1="145" x2="90" y2="110" stroke="url(#bGrad)" stroke-width="6" stroke-linecap="round"/>
+  <line x1="235" y1="145" x2="310" y2="110" stroke="url(#bGrad)" stroke-width="6" stroke-linecap="round"/>
+  <line x1="165" y1="160" x2="100" y2="195" stroke="url(#bGrad)" stroke-width="6" stroke-linecap="round"/>
+  <line x1="235" y1="160" x2="300" y2="195" stroke="url(#bGrad)" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="90" cy="110" rx="42" ry="8" fill="url(#pGrad)" opacity="0.5"><animateTransform attributeName="transform" type="rotate" from="0 90 110" to="360 90 110" dur="0.3s" repeatCount="indefinite"/></ellipse>
+  <ellipse cx="310" cy="110" rx="42" ry="8" fill="url(#pGrad)" opacity="0.5"><animateTransform attributeName="transform" type="rotate" from="0 310 110" to="-360 310 110" dur="0.25s" repeatCount="indefinite"/></ellipse>
+  <ellipse cx="100" cy="195" rx="38" ry="7" fill="url(#pGrad)" opacity="0.4"><animateTransform attributeName="transform" type="rotate" from="0 100 195" to="-360 100 195" dur="0.28s" repeatCount="indefinite"/></ellipse>
+  <ellipse cx="300" cy="195" rx="38" ry="7" fill="url(#pGrad)" opacity="0.4"><animateTransform attributeName="transform" type="rotate" from="0 300 195" to="360 300 195" dur="0.32s" repeatCount="indefinite"/></ellipse>
+  <circle cx="90" cy="110" r="8" fill="#1a1e2e" stroke="#00d4ff" stroke-width="1"/><circle cx="90" cy="110" r="2" fill="#00d4ff" filter="url(#g1)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+  <circle cx="310" cy="110" r="8" fill="#1a1e2e" stroke="#00d4ff" stroke-width="1"/><circle cx="310" cy="110" r="2" fill="#00d4ff" filter="url(#g1)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" begin="0.4s"/></circle>
+  <circle cx="100" cy="195" r="7" fill="#1a1e2e" stroke="#7b2ff7" stroke-width="1"/><circle cx="100" cy="195" r="2" fill="#7b2ff7" filter="url(#g1)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" begin="0.8s"/></circle>
+  <circle cx="300" cy="195" r="7" fill="#1a1e2e" stroke="#7b2ff7" stroke-width="1"/><circle cx="300" cy="195" r="2" fill="#7b2ff7" filter="url(#g1)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" begin="1.2s"/></circle>
+  <rect x="155" y="130" width="90" height="45" rx="12" fill="url(#bGrad)" stroke="#2a2f44" stroke-width="1"/>
+  <rect x="165" y="150" width="70" height="2.5" rx="1.25" fill="url(#aGrad)" opacity="0.7"/>
+  <rect x="182" y="177" width="36" height="22" rx="5" fill="#0d1020" stroke="#2a2f44" stroke-width="1"/>
+  <circle cx="200" cy="188" r="7" fill="#1a1e2e" stroke="#00d4ff" stroke-width="1"/><circle cx="200" cy="188" r="2" fill="#00d4ff" opacity="0.5"/>
+  <line x1="170" y1="175" x2="162" y2="215" stroke="#2a2f44" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="230" y1="175" x2="238" y2="215" stroke="#2a2f44" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="155" y1="215" x2="170" y2="215" stroke="#2a2f44" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="230" y1="215" x2="245" y2="215" stroke="#2a2f44" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

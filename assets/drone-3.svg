@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bG3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a1e2e"/><stop offset="100%" stop-color="#0d1020"/></linearGradient>
+    <linearGradient id="aG3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00ff88"/><stop offset="100%" stop-color="#00d4ff"/></linearGradient>
+    <linearGradient id="pG3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00ff88" stop-opacity="0.6"/><stop offset="100%" stop-color="#00ff88" stop-opacity="0"/></linearGradient>
+    <filter id="g3"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <!-- Compact racing drone - low profile, angular -->
+  <line x1="173" y1="140" x2="105" y2="105" stroke="url(#bG3)" stroke-width="5" stroke-linecap="round"/>
+  <line x1="227" y1="140" x2="295" y2="105" stroke="url(#bG3)" stroke-width="5" stroke-linecap="round"/>
+  <line x1="173" y1="160" x2="110" y2="195" stroke="url(#bG3)" stroke-width="5" stroke-linecap="round"/>
+  <line x1="227" y1="160" x2="290" y2="195" stroke="url(#bG3)" stroke-width="5" stroke-linecap="round"/>
+  <!-- Prop guards -->
+  <circle cx="105" cy="105" r="30" fill="none" stroke="#00ff88" stroke-width="0.8" opacity="0.3"/>
+  <circle cx="295" cy="105" r="30" fill="none" stroke="#00ff88" stroke-width="0.8" opacity="0.3"/>
+  <circle cx="110" cy="195" r="28" fill="none" stroke="#00d4ff" stroke-width="0.8" opacity="0.3"/>
+  <circle cx="290" cy="195" r="28" fill="none" stroke="#00d4ff" stroke-width="0.8" opacity="0.3"/>
+  <!-- Propellers - fast spin -->
+  <ellipse cx="105" cy="105" rx="28" ry="5" fill="url(#pG3)" opacity="0.6"><animateTransform attributeName="transform" type="rotate" from="0 105 105" to="360 105 105" dur="0.15s" repeatCount="indefinite"/></ellipse>
+  <ellipse cx="295" cy="105" rx="28" ry="5" fill="url(#pG3)" opacity="0.6"><animateTransform attributeName="transform" type="rotate" from="0 295 105" to="-360 295 105" dur="0.12s" repeatCount="indefinite"/></ellipse>
+  <ellipse cx="110" cy="195" rx="26" ry="5" fill="url(#pG3)" opacity="0.5"><animateTransform attributeName="transform" type="rotate" from="0 110 195" to="-360 110 195" dur="0.14s" repeatCount="indefinite"/></ellipse>
+  <ellipse cx="290" cy="195" rx="26" ry="5" fill="url(#pG3)" opacity="0.5"><animateTransform attributeName="transform" type="rotate" from="0 290 195" to="360 290 195" dur="0.16s" repeatCount="indefinite"/></ellipse>
+  <!-- Motors -->
+  <circle cx="105" cy="105" r="7" fill="#1a1e2e" stroke="#00ff88" stroke-width="1.5"/><circle cx="105" cy="105" r="2" fill="#00ff88" filter="url(#g3)"><animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite"/></circle>
+  <circle cx="295" cy="105" r="7" fill="#1a1e2e" stroke="#00ff88" stroke-width="1.5"/><circle cx="295" cy="105" r="2" fill="#00ff88" filter="url(#g3)"><animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite" begin="0.2s"/></circle>
+  <circle cx="110" cy="195" r="7" fill="#1a1e2e" stroke="#00d4ff" stroke-width="1.5"/><circle cx="110" cy="195" r="2" fill="#00d4ff" filter="url(#g3)"><animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite" begin="0.4s"/></circle>
+  <circle cx="290" cy="195" r="7" fill="#1a1e2e" stroke="#00d4ff" stroke-width="1.5"/><circle cx="290" cy="195" r="2" fill="#00d4ff" filter="url(#g3)"><animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite" begin="0.6s"/></circle>
+  <!-- Compact angular body -->
+  <polygon points="170,135 200,120 230,135 230,165 200,180 170,165" fill="url(#bG3)" stroke="#2a2f44" stroke-width="1"/>
+  <line x1="180" y1="148" x2="220" y2="148" stroke="url(#aG3)" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+  <!-- FPV camera -->
+  <rect x="190" y="122" width="20" height="12" rx="3" fill="#0d1020" stroke="#00ff88" stroke-width="1"/>
+  <circle cx="200" cy="128" r="4" fill="#0d1020"/><circle cx="200" cy="128" r="1.5" fill="#00ff88" opacity="0.8"><animate attributeName="opacity" values="0.8;1;0.8" dur="0.5s" repeatCount="indefinite"/></circle>
+  <!-- Speed lines -->
+  <line x1="50" y1="148" x2="120" y2="148" stroke="#00ff88" stroke-width="0.5" opacity="0.2"><animate attributeName="opacity" values="0;0.3;0" dur="1.5s" repeatCount="indefinite"/></line>
+  <line x1="30" y1="155" x2="110" y2="155" stroke="#00d4ff" stroke-width="0.5" opacity="0.15"><animate attributeName="opacity" values="0;0.2;0" dur="1.8s" repeatCount="indefinite" begin="0.3s"/></line>
+</svg>
